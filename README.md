@@ -82,6 +82,7 @@
 ### recipes
 
 - [brigadeiro](recipes/brigadeiro.md)
+- [cumaru "caipirinha"](recipes/cumaru-caipirinha.md)
 - [easy donuts](recipes/easy-donuts-2-ingredients.md)
 
 ### web
