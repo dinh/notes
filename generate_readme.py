@@ -22,8 +22,7 @@ def get_title(filepath: str) -> str:
 
 
 def get_date(file: str) -> Optional[str]:
-    match = re.search(r"(\d{4}-\d{2}-\d{2})", file)
-    if match:
+    if match := re.search(r"(\d{4}-\d{2}-\d{2})", file):
         return match.group(0)
 
     return ""
@@ -61,8 +60,7 @@ def get_notes() -> List[Note]:
 def sort_notes(notes: List[Note]) -> List[Note]:
     title_asc = sorted(notes, key=attrgetter("title"))
     created_at_desc = sorted(title_asc, key=attrgetter("created_at"), reverse=True)
-    category_asc = sorted(created_at_desc, key=attrgetter("category"))
-    return category_asc
+    return sorted(created_at_desc, key=attrgetter("category"))
 
 
 def generate_header() -> str:
